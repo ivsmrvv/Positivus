@@ -6,6 +6,8 @@
       "type": "shell",
       "command": "sass styles.scss styles.css",
       "group": "build"
+
+      
     }
   ]
 }
