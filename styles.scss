@@ -1,6 +1,6 @@
-@import "styles/normalize", "styles/variables", "styles/fonts", "styles/mixins",
-  "styles/media", "styles/utils", "styles/globals";
+@import "styles/normalize", "styles/mixins", "styles/media", "styles/variables",
+  "styles/fonts", "styles/globals", "styles/utils";
 
 @import "styles/blocks/burger-button", "styles/blocks/button",
   "styles/blocks/header", "styles/blocks/cross-button",
-  "styles/blocks/mobile-overlay";
+  "styles/blocks/mobile-overlay", "styles/blocks/section", "styles/blocks/hero";
