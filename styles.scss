@@ -1,6 +1,8 @@
 @import "styles/normalize", "styles/mixins", "styles/media", "styles/variables",
   "styles/fonts", "styles/globals", "styles/utils";
 
-@import "styles/blocks/burger-button", "styles/blocks/button",
-  "styles/blocks/header", "styles/blocks/cross-button",
-  "styles/blocks/mobile-overlay", "styles/blocks/section", "styles/blocks/hero";
+@import "styles/blocks/burger-button", "styles/blocks/grid",
+  "styles/blocks/button", "styles/blocks/header", "styles/blocks/cross-button",
+  "styles/blocks/mobile-overlay", "styles/blocks/section", "styles/blocks/hero",
+  "styles/blocks/services", "styles/blocks/service-card", "styles/blocks/banner",
+  "styles/blocks/puddle-bg";
