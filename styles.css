@@ -854,12 +854,22 @@ h4 {
   --bannerImageOffsetY: 24px;
   padding-block: var(--bannerImageOffsetY);
 }
+@media (max-width: 1023px) {
+  .banner {
+    --bannerImageOffsetY: 0;
+  }
+}
 .banner__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-gray);
   border-radius: var(--border-radius-large);
+}
+@media (max-width: 1023px) {
+  .banner__inner {
+    justify-content: center;
+  }
 }
 .banner__body {
   padding: 60px;
@@ -869,8 +879,25 @@ h4 {
   row-gap: 26px;
   justify-content: space-between;
 }
+@media (max-width: 1023px) {
+  .banner__body {
+    padding: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__body {
+    align-items: center;
+    row-gap: 20px;
+  }
+}
 .banner__image {
   margin-block: calc(var(--bannerImageOffsetY) * -1);
+}
+@media (max-width: 1023px) {
+  .banner__image {
+    max-width: 40%;
+    height: auto;
+  }
 }
 .banner__description {
   max-width: 500px;

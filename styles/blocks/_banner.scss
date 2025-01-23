@@ -3,12 +3,20 @@
 
   padding-block: var(--bannerImageOffsetY);
 
+  @include tablet {
+    --bannerImageOffsetY: 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-gray);
     border-radius: var(--border-radius-large);
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__body {
@@ -18,10 +26,28 @@
     align-items: start;
     row-gap: 26px;
     justify-content: space-between;
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    @include mobile {
+      align-items: center;
+      row-gap: 20px;
+    }
   }
 
   &__image {
     margin-block: calc(var(--bannerImageOffsetY) * -1);
+
+    @include tablet {
+      max-width: 40%;
+      height: auto;
+    }
+
+    @include mobile {
+      
+    }
   }
 
   &__description {
