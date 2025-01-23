@@ -72,15 +72,6 @@
         display: flex;
         justify-content: center;
       }
-
-      @include mobile-s {
-        display: flex;
-        justify-content: start;
-
-        &:nth-child(-n + 3) {
-          justify-content: end;
-        }
-      }
     }
 
     &-image {
