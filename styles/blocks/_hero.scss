@@ -65,16 +65,6 @@
         grid-template-columns: repeat(3, 1fr);
         row-gap: 20px;
       }
-
-      @include mobile-s {
-        --heroPartnersWidthOffsetX: 60px;
-
-        width: calc(100vw + var(--heroPartnersWidthOffsetX) * 2);
-        margin-left: calc(
-          (var(--heroPartnersWidthOffsetX) + var(--container-padding-x)) * -1
-        );
-        column-gap: 0;
-      }
     }
 
     &-item {
