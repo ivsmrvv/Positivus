@@ -273,19 +273,23 @@ h4 {
   font-weight: 500;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: clamp(43px, 864vw, 60px);
 }
 
-h2 {
+h2,
+.h2 {
   font-size: clamp(36px, 576vw, 40px);
 }
 
-h3 {
+h3,
+.h3 {
   font-size: clamp(18px, 432vw, 30px);
 }
 
-h4 {
+h4,
+.h4 {
   font-size: clamp(18px, 288vw, 20px);
 }
 
@@ -409,6 +413,16 @@ h4 {
 }
 @media (max-width: 1023px) {
   .grid--2 {
+    --gridColumns: 1;
+  }
+}
+@media (max-width: 1280px) {
+  .grid--3 {
+    --gridColumns: 2;
+  }
+}
+@media (max-width: 767px) {
+  .grid--3 {
     --gridColumns: 1;
   }
 }
@@ -987,7 +1001,11 @@ h4 {
   list-style: none;
 }
 .process__item {
+  --contentCustomCounter: counter(custom-counter);
   counter-increment: custom-counter;
+}
+.process__item:nth-child(-n+9) {
+  --contentCustomCounter: "0" counter(custom-counter);
 }
 .process__accordion {
   --indicatorVerticalRotate: 90deg;
@@ -1032,7 +1050,7 @@ h4 {
   user-select: none;
 }
 .process__accordion-title::before {
-  content: "0" counter(custom-counter);
+  content: var(--contentCustomCounter);
   font-size: 2em;
 }
 @media (max-width: 767px) {
@@ -1081,6 +1099,69 @@ h4 {
     padding-top: 10px;
     margin-top: 20px;
     font-size: 12px;
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.team__button {
+  align-self: end;
+  min-width: 269px;
+}
+@media (max-width: 767px) {
+  .team__button {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+.team-card {
+  padding: 40px 35px;
+  height: 100%;
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+}
+.team-card__header {
+  display: flex;
+}
+.team-card__image:not(:last-child) {
+  margin-right: 20px;
+}
+.team-card__info {
+  align-self: end;
+}
+.team-card__info:not(:last-child) {
+  margin-right: 10px;
+}
+.team-card__name:not(:last-child) {
+  margin-bottom: 3px;
+}
+.team-card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  margin-left: auto;
+  align-self: start;
+  color: var(--color-accent);
+  background-color: var(--color-dark);
+  border-radius: 50%;
+}
+.team-card__body {
+  --teamCardBodyMargin: 28px;
+  padding-top: var(--teamCardBodyMargin);
+  margin-top: var(--teamCardBodyMargin);
+  border-top: var(--border);
+}
+@media (max-width: 767px) {
+  .team-card__body {
+    --teamCardBodyMargin: 20px;
   }
 }
 

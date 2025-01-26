@@ -8,7 +8,13 @@
   }
 
   &__item {
+    --contentCustomCounter: counter(custom-counter);
+
     counter-increment: custom-counter;
+
+    &:nth-child(-n + 9) {
+      --contentCustomCounter: "0" counter(custom-counter);
+    }
   }
 
   &__accordion {
@@ -51,7 +57,7 @@
       user-select: none;
 
       &::before {
-        content: "0" counter(custom-counter);
+        content: var(--contentCustomCounter);
         font-size: 2em;
       }
 
