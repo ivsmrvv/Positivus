@@ -1,0 +1,14 @@
+.pagination {
+  align-self: center;
+
+  &__button {
+    @include reset-button;
+    @include square(24px);
+
+    color: var(--color-white);
+
+    &.is-current {
+      color: var(--color-accent);
+    }
+  }
+}
