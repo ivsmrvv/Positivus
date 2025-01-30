@@ -6,6 +6,11 @@
   flex-direction: column;
   row-gap: 48px;
 
+  @include tablet {
+    --reviewCardCurrenWidth: 30px;
+    --reviewCardBodyPaddingLeft: 40px;
+  }
+
   &__body {
     position: relative;
     padding: 48px var(--reviewCardBodyPaddingLeft) 52px;
