@@ -1,0 +1,36 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  &__label {
+    @include fluid-text(18, 16);
+  }
+
+  &__input,
+  &__textarea {
+    padding: 30px 18px;
+    height: var(--input-height);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+
+    @include tablet {
+      padding: 18px 20px;
+    }
+
+    &::placeholder {
+      color: var(--color-gray-alt);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: var(--color-accent);
+      border: var(--color-accent);
+    }
+  }
+
+  &__textarea {
+    height: 190px;
+    resize: vertical;
+  }
+}
