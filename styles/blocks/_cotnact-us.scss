@@ -1,0 +1,49 @@
+.contact-us {
+  --contactUsPaddingBlock: 60px;
+
+  position: relative;
+  padding: var(--contactUsPaddingBlock) 100px 80px;
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  overflow-x: hidden;
+
+  @include tablet {
+    padding: 52px 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    max-width: 556px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  &::after {
+    content: "";
+    height: calc(100% - var(--contactUsPaddingBlock) * 2);
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    translate: -50% -50%;
+
+    background-image: url(../../images/Illustration.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
