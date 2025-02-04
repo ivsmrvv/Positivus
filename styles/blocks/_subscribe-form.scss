@@ -6,7 +6,38 @@
   background-color: var(--color-dark-alt);
   border-radius: var(--border-radius);
 
+  @include desktop {
+    flex-direction: column;
+    row-gap: 22px;
+    width: 100%;
+  }
+
+  &__input {
+    padding-inline: 35px;
+    background-color: var(--color-dark-alt);
+    outline: none;
+    border: 1px solid var(--color-white);
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+
+    &:focus {
+      color: var(--color-accent);
+      background-color: var(--color-dark);
+      border: var(--color-accent);
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
   &__button {
     height: var(--input-height);
+
+    @include desktop {
+      width: 100%;
+    }
   }
 }
