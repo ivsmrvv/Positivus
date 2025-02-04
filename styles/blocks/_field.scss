@@ -29,6 +29,25 @@
     }
   }
 
+  &__input {
+    &--dark {
+      padding-inline: 35px;
+      background-color: var(--color-dark-alt);
+      outline: none;
+      border: 1px solid var(--color-white);
+
+      &::placeholder {
+        color: var(--color-white);
+      }
+
+      &:focus {
+        color: var(--color-accent);
+        background-color: var(--color-dark);
+        border: var(--color-accent);
+      }
+    }
+  }
+
   &__textarea {
     height: 190px;
     resize: vertical;
