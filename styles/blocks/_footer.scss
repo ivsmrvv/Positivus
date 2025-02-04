@@ -1,4 +1,8 @@
 .footer {
+  @include tablet {
+    padding-inline: 0;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -7,28 +11,52 @@
     padding: 55px 60px 50px;
     background-color: var(--color-dark);
     color: var(--color-white);
+
+    @include tablet {
+      padding: 50px 20px;
+      align-items: center;
+      border-radius: 0;
+    }
   }
 
   &__navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      display: contents;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      row-gap: 37px;
+    }
   }
 
   &__menu {
     &-list {
       display: flex;
       column-gap: 40px;
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 15px;
+      }
     }
 
     &-link {
       display: flex;
       align-items: center;
+      justify-content: center;
       height: 30px;
       text-decoration: underline;
 
       @include hover {
         color: var(--color-accent);
+      }
+
+      @include tablet {
+        text-decoration: none;
       }
     }
   }
@@ -37,6 +65,11 @@
     display: flex;
     column-gap: 30px;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 37px;
+    }
   }
 
   &__contacts {
@@ -58,6 +91,11 @@
         }
       }
     }
+
+    @include tablet {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__extra {
@@ -65,6 +103,14 @@
     column-gap: 40px;
     padding-top: 50px;
     border-top: 1px solid var(--color-white);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+      order: 2;
+      width: 100%;
+    }
   }
 
   &__privacy-policy-link {
@@ -72,6 +118,10 @@
 
     @include hover {
       color: var(--color-accent);
+    }
+
+    @include tablet {
+      text-decoration: none;
     }
   }
 }
